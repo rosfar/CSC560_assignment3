@@ -1,0 +1,45 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/soccer" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{soccer._id}}">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Name" value="{{soccer.name}}">
+        <div class="text-danger">
+            {{soccer.nameError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Game Played</label>
+            <input type="text" class="form-control" name="gamePlayed" placeholder="Game Played" value="{{soccer.gamePlayed}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Goals</label>
+            <input type="text" class="form-control" name="goals" placeholder="Goals" value="{{soccer.goals}}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Assists</label>
+            <input type="text" class="form-control" name="assists" placeholder="Assists" value="{{soccer.assists}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Shots</label>
+            <input type="text" class="form-control" name="shots" placeholder="Shots" value="{{soccer.shots}}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Yellow Cards</label>
+            <input type="text" class="form-control" name="yellowCards" placeholder="Yellow Cards" value="{{soccer.yellowCards}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>redCards</label>
+            <input type="text" class="form-control" name="redCards" placeholder="Red Cards" value="{{soccer.redCards}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/soccer/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
